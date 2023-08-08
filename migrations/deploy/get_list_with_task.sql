@@ -8,8 +8,8 @@ CREATE FUNCTION getAll_list_tasks(integer)
     list_title text,
     category_id INTEGER,
     list_user_id INTEGER,
-    created_at TIMESTAMP,
-    updated_at TIMESTAMP,
+    created_at TIMESTAMPTZ,
+    updated_at TIMESTAMPTZ,
     task JSON
 ) AS $$
   SELECT

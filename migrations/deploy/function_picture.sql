@@ -10,8 +10,8 @@ RETURNS TABLE (
     last_name text,
     first_name text,
     pseudo text,
-    created_at timestamp,
-    updated_at timestamp,
+    created_at timestamptz,
+    updated_at timestamptz,
     comments json
 ) AS $$
     SELECT
