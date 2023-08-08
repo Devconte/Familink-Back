@@ -1,0 +1,14 @@
+%syntax-version=1.0.0
+%project=FamiLink
+%uri=https://github.com/O-clock-Starship/projet-02-famiLink-back.git
+
+init 2023-06-05T10:00:09Z karim <mail.afroukh@gmail.com> # creation tables
+create_function_datamapper 2023-06-06T14:22:37Z karim <mail.afroukh@gmail.com> # create function
+update_function 2023-06-07T10:44:54Z karim <mail.afroukh@gmail.com> # Update function CRUD
+get_list_with_task 2023-06-08T16:51:28Z karim <mail.afroukh@gmail.com> # add get_list_with_task
+function_events 2023-06-08T17:46:02Z karim <mail.afroukh@gmail.com> # add all events from a family
+function_message 2023-06-08T22:40:18Z Devconte <romain.lcnte@gmail.com> # adding function for getting all messages of a specific family
+function_picture 2023-06-08T21:56:27Z Devconte <romain.lcnte@gmail.com> # adding function for picture of a family
+function_get_all_family 2023-06-09T09:06:32Z Devconte <romain.lcnte@gmail.com> # adding function to get everything of a family
+updateUser 2023-06-12T11:35:06Z karim <mail.afroukh@gmail.com> # add refresh_token to user
+user_email_verification 2023-06-20T14:00:37Z karim <mail.afroukh@gmail.com> # add column verified_email on user table
