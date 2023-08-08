@@ -10,8 +10,8 @@ RETURNS TABLE (
   last_name TEXT,
   first_name TEXT,
   pseudo TEXT,
-  created_at timestamp,
-  updated_at timestamp
+  created_at timestamptz,
+  updated_at timestamptz
 ) 
 AS $$
   SELECT 
