@@ -1,0 +1,5 @@
+ id |         email          |                           password                           | first_name | last_name |   pseudo    | role_id | family_id |          created_at           | updated_at | refresh_token | verified_email 
+----+------------------------+--------------------------------------------------------------+------------+-----------+-------------+---------+-----------+-------------------------------+------------+---------------+----------------
+  3 | mike.dutheil@gmail.com | $2b$10$DqFXuPOCQVpC8e06HV11e.NfzGjzucmHyTOFLsG64mlrSRtZ/Qcpe | Rmain      | Leconte   | Lecontetest |       1 |         1 | 2023-08-08 15:55:29.424356+02 |            |               | f
+(1 row)
+

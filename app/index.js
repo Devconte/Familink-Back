@@ -5,6 +5,7 @@ const logger = require('./helpers/logger');
 const router = require('./routers');
 const { swaggerSpec } = require('./helpers/swagger');
 const uploadMiddleware = require('./helpers/upload');
+const path = require('path');
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(uploadMiddleware);
+app.use(express.static('dist'));
 app.use(express.static('app/images'));
 
 app.use((request, _, next) => {
@@ -25,6 +27,11 @@ app.use((request, _, next) => {
   next();
 });
 app.use('/api-doc', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
 app.use('/api', router);
+ 
+app.use('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '/home/student/Familink-Back/dist', 'index.html'));
+});
 
 module.exports = app;
