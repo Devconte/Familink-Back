@@ -1,4 +1,4 @@
-const url = `href=${process.env.API_URL_MAIL}/api/verify/`;
+const url = `href=${process.env.API_URL_MAIL}/api/user/verify/`;
 
 const confirmEmailTemplate = (user, token) => (
   {
