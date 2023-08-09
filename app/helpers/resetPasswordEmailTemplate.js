@@ -1,3 +1,5 @@
+const url = process.env.API_URL_MAIL;
+
 const resetPasswordEmailTemplate = (user, token) => (
   {
     email: user.email,
@@ -9,7 +11,7 @@ const resetPasswordEmailTemplate = (user, token) => (
         <h1>FamiLink</h1>
         <h2> Bonjour, ${user.first_name} </h2>
         <p>Veuillez cliquer pour réinitialiser votre mot de passe en  cliquant sur le lien ci-dessous</p>
-        <a href=https://michaeldutheil-server.eddi.cloud/reset-password?token=${token}>
+        <a href=${process.env.API_URL_MAIL}/reset-password?token=${token}>
         <button style="background-color: #4CAF50; color: white; padding: 4px 20px; text-align: center; text-decoration: none; display: inline-block; border: none;  font-size: 20px; border-radius: 12px; cursor: pointer;">
         Cliquez ici !
         </button>

@@ -93,10 +93,10 @@ class UserController extends CoreController {
     const verifiedMail = await isVerifiedEmail(decodedToken.data.userId, res);
     if (verifiedMail) {
       logger.info(`Bad request : the email has already been verified ${verifiedMail}`);
-      return res.status(400).redirect('https://michaeldutheil-server.eddi.cloud/');
+      return res.status(400).redirect(process.env.API_URL_MAIL);
     }
     await UserDataMapper.confirmEmailUser(decodedToken.data.userId);
-    return res.redirect('https://michaeldutheil-server.eddi.cloud/');
+    return res.redirect(process.env.API_URL_MAIL);
   }
 
   async sendResetEmailPassword(req, res) {
@@ -108,12 +108,12 @@ class UserController extends CoreController {
     const user = await UserDataMapper.findByEmail(email);
     if (!user || !user.verified_email) {
       logger.info('Bad request : the user don\'t exist or the mail is not verified');
-      return res.status(400).redirect('https://michaeldutheil-server.eddi.cloud/');
+      return res.status(400).redirect(process.env.API_URL_MAIL);
     }
     const token = auth.generateAccessToken(req.ip, user, true);
     const emailTemplate = resetPasswordEmailTemplate(user, token);
     sendMails(emailTemplate);
-    return res.redirect('https://michaeldutheil-server.eddi.cloud/');
+    return res.redirect(process.env.API_URL_MAIL);
   }
 }
 

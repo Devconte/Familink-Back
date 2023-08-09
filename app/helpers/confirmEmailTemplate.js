@@ -1,4 +1,4 @@
-const url = process.env.NODE_ENV === 'development' ? 'href=http://localhost:3000/api/user/verify/' : 'href=https://michaeldutheil-server.eddi.cloud/api/user/verify/';
+const url = process.env.NODE_ENV === 'development' ? 'href=http://localhost:3000/api/user/verify/' : process.env.API_URL_MAIL;
 
 const confirmEmailTemplate = (user, token) => (
   {
