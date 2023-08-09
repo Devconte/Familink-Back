@@ -18,7 +18,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(uploadMiddleware);
-app.use(express.static('app/images'));
+app.use('/api', express.static('app/images'));
 
 app.use((request, _, next) => {
   logger.info(`${request.method} ${request.url} - ${request.ip}`);
