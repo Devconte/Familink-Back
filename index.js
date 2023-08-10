@@ -6,6 +6,8 @@ const app = require('./app');
 const port = process.env.PORT ?? 3000;
 const server = http.createServer(app);
 
+app.set('trust proxy', 1);
+
 server.listen(port, () => {
   logger.info(`Create server HTTP listenning on port: ${port} , ${process.env.NODE_ENV}`);
 });

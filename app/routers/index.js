@@ -8,7 +8,6 @@ const userRouter = require('./user');
 const taskRouter = require('./task');
 const familyRouter = require('./family');
 const categoryRouter = require('./category');
-const { error404 } = require('../errors');
 const errorHandler = require('../errors/helper/errorHandler');
 
 const auth = require('../controllers/auth/authMiddleware');
@@ -32,8 +31,6 @@ router.use('/family', auth, familyRouter);
 router.use('/category', categoryRouter);
 
 router.use('/user', userRouter);
-
-router.use(error404);
 
 router.use(errorHandler);
 

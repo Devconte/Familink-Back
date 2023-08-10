@@ -1,4 +1,4 @@
-const url = process.env.NODE_ENV === 'development' ? 'href=http://localhost:3000/api/user/verify/' : 'href=http://familink-api.my-projects.fr/api/user/verify/';
+const url = `href=${process.env.API_URL_MAIL}/api/user/verify/`;
 
 const confirmEmailTemplate = (user, token) => (
   {

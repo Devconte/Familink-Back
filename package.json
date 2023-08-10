@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "NODE_ENV=development npx nodemon index.js",
     "resetDB": "sqitch revert && sqitch deploy && psql -d familink -f ./data/seeding.sql",
-    "resetDBVPS": "sqitch revert && sqitch deploy && psql -U mike -h 127.0.0.1 -d f4m1l1nk -f ./data/seeding.sql",
+    "resetDBVPS": "sqitch revert && sqitch deploy && psql -U familink -h 127.0.0.1 -d familink -f ./data/seeding.sql",
     "test": "npx jest"
   },
   "repository": {

@@ -5,10 +5,10 @@ const PictureController = require('../controllers/PictureController');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
+/* router.get('/', (req, res) => {
   const filepath = path.join(__dirname, '..', 'views', 'index.html');
   res.sendFile(filepath);
-});
+}); */
 
 router.post(
   '/add',
