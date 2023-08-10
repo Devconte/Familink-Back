@@ -13,7 +13,10 @@ const Options = {
         url: 'http://localhost:3000',
       },
       {
-        url: 'http://familink-api.my-projects.fr/',
+        url: 'https://devconte-server.eddi.cloud/',
+      },
+      {
+        url: 'https://michaeldutheil-server.eddi.cloud/',
       },
     ],
   },
