@@ -2,6 +2,13 @@ const jwt = require('jsonwebtoken');
 const logger = require('../../helpers/logger');
 const CustomError = require('../../errors/CustomError');
 
+const path = require('path');
+const dotenv = require('dotenv');
+
+dotenv.config({
+  path:path.resolve(__dirname, "../../../.env" )
+});
+
 const UserDataMapper = require('../../models/UserDataMapper');
 
 const {

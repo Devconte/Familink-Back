@@ -59,6 +59,12 @@ class UserController extends CoreController {
     if (password.length < 8) {
       throw new CustomError(400, 'Bad Request', 'Password must be at least 8 characters');
     }
+    const uppercaseRegex = /[A-Z]/;
+    const specialCharRegex = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/;
+
+    if (!uppercaseRegex.test(password) || !specialCharRegex.test(password)) {
+      throw new CustomError(400, 'Bad Request', 'Password must contain at least one uppercase letter and one special character');
+    }
     const isEmailExist = await UserDataMapper.findByEmail(email);
     if (isEmailExist) {
       throw new CustomError(400, 'Bad Request', 'Already used email');

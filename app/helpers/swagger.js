@@ -18,6 +18,9 @@ const Options = {
       {
         url: 'https://michaeldutheil-server.eddi.cloud/',
       },
+      {
+        url: 'https://familink.my-projects.fr/',
+      },
     ],
   },
   apis: ['./app/routers/doc/*.js'],
