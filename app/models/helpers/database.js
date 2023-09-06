@@ -1,5 +1,11 @@
 const { Pool, types } = require('pg');
 const logger = require('../../helpers/logger');
+const path = require('path');
+const dotenv = require('dotenv');
+
+dotenv.config({
+  path:path.resolve(__dirname, "../../../.env" )
+});
 
 /* override node-postgres parser for the type date (1082)
 and return the value without parsing it */
